@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta content="utf-8">
+		<title>Responsive Tabs</title>
+		<link href="styles.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".box").on("click","li", function(){
+					var tabsId = $(this).attr("id");
+					$(this).addClass("active").siblings().removeClass("active");
+					$("#" + tabsId + "-content-box").addClass("active").siblings().removeClass("active");
+				})
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="box">
+			<ul>
+				<li id="tab-one" class="active">
+					<i class="fas fa-gift"></i>
+					<h4>Gift</h4>
+				</li>
+				<li id="tab-two" class="active">
+					<i class="fas fa-glass-martini"></i>
+					<h4>Glass</h4>
+				</li>
+				<li id="tab-three" class="active">
+					<i class="fas fa-globe"></i>
+					<h4>Globe</h4>
+				</li>
+				<li id="tab-four" class="active">
+					<i class="fas fa-graduation-cap"></i>
+					<h4>Graduate</h4>
+				</li>
+			</ul>
+		<div class="content">
+			<div id="tab-one-content-box" class="hide active">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+				Nulla aliquet quis metus quis accumsan. Phasellus auctor, 
+				augue in dictum semper, metus urna ullamcorper dui, quis 
+				molestie libero nisi sed nibh.</p>
+			</div>
+			<div id="tab-two-content-box" class="hide">
+				<p>Ut in sem semper justo semper hendrerit. Vestibulum 
+				imperdiet pretium dolor in hendrerit. Curabitur pretium
+				 felis quis tempus bibendum.</p>
+			</div>
+			<div id="tab-three-content-box" class="hide">
+				<p>Aliquam orci sem, viverra at diam ut, luctus porttitor 
+				turpis. Praesent at gravida felis, quis euismod diam. Aliquam 
+				in gravida nulla.</p>
+			</div>
+			<div id="tab-four-content-box" class="hide">
+				<p>Sed finibus mattis lacus, quis lobortis sem tristique nec. 
+				Aenean sagittis dignissim magna in sollicitudin. Ut tincidunt 
+				eget sapien eget consectetur. Duis ut rutrum nibh, ac tempus magna. 
+				Curabitur lorem mi, vulputate a libero sit amet, tincidunt faucibus 
+				arcu. Sed eget fermentum est.</p>
+			</div>
+		</div>
+		</div>
+	</body>
+
+</html>
