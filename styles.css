@@ -1,0 +1,87 @@
+﻿
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: #289695;
+}
+.box {
+	width: 800px;
+	height: auto;
+	margin: 150px auto;
+	background: #126998;
+	min-height: 200px;
+	box-shadow: 0 5px 10px rgba(0,0,0,.5);
+}
+.box ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	background: #fff;
+}
+.box ul li {
+	margin: 0;
+	padding: 5px;
+	width: 25%;
+	box-sizing: border-box;
+	text-align: center;
+	list-style: none;
+	cursor: pointer;
+}
+.box ul li .fa {
+	color: #262626;
+	font-size: 36px;
+}
+.box ul li h4 {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	color: #262626;
+}
+.box ul li.active .fa,
+.box ul li.active h4 {
+	color: #289695;
+} 
+.box ul li.active {
+	color: #289695;	
+}
+.content {
+	padding: 20px;
+}
+.content p {
+	margin: 0;
+	padding: 0;
+	text-align: justify;
+	color:#fff;
+}
+.hide {
+	display: none;	
+}
+.active {
+	display: block;
+}
+@media (max-width: 900px) {
+	.box {
+		width: 90%;
+		margin: 100px auto;
+	}
+	.box ul {
+		display: block;
+	}
+	.box ul li {
+		width: 50%;
+		float: left;
+	}
+	.box ul li .fa {
+		font-size: 20px;
+	}
+}
+@media (max-width: 400px) {
+	.box{
+		width: 100%;
+		border-bottom: 1px solid rgba(0,0,0,.1); 
+	}
+	.box ul li .fa {
+		display: none;
+	}
+}	
